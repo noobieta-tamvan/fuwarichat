@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>Intergram!</title>
+    <link rel="stylesheet" type="text/css" href="css/chat.css">
+
+</head>
+<body>
+
+<script type="text/javascript">
+          L2Dwidget
+        .init({
+           model: {
+
+           jsonPath: "media/live2d/model/rem/model.json"},
+           
+            display: {
+                "position": "left",
+                "width": 250,
+                "height": 400,
+                "hOffset": -20,
+                "vOffset": -60
+            },
+           mobile: { 
+               show: true,
+               scale: 1
+           },
+           desktop: { 
+               show: true,
+               scale: 1
+           },
+          dialog: {
+            enable: true,
+            script: {
+              'every idle 10s': '$hitokoto$',
+              'hover .star': 'Halloo 😍',
+              'tap body': ' Yay Omess 🤬 Otak Mesum ,aku dah ada yang poenya aa thanvank 🤭',
+              'tap face': '     Apa sih 🫣 sayank 😘 ！'
+            }
+          }
+        });
+    </script>
+<div id="intergramChat"></div>
+<script src="js/chat.js"></script>
+<audio id="messageSound" src="media/ping.mp3" preload="auto"></audio>
+</body>
+</html>
