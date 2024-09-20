@@ -10,7 +10,10 @@
     "start": "TELEGRAM_TOKEN=7413374455:AAH8AkD7257w6528xiGvnM7700co-L-lLR0 node server.js",
     "postinstall": "npm run build",
     "dev": "start  http://localhost:3000/demo.html & node devServer.js",
-    "build": "shx mkdir -p public && shx cp *.html public && shx cp -r ./media public && shx cp -r ./css public && webpack -p",
+    "build": "shx mkdir -p public && shx cp *.html public && shx cp -r ./media public && shx cp -r ./css public && webpack -p"
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"}
+    ],
     "test": "npm run -s lint",
     "lint": "eslint src"
   },
